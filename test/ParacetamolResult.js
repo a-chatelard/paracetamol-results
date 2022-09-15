@@ -11,8 +11,8 @@ contract("ParacetamolResult", (accounts) => {
     it("should be able to add a new result", async () => {
         const result = await contractInstance.addResult(patientRefs[0], lotLabels[0], true, { from: medicalEnterprise });
         assert.equal(result.receipt.status, true);
-        console.log(result);
     })
+
     it("shouldn't be able to add a new result on an existing patient", async () => {
         await contractInstance.addResult(patientRefs[0], lotLabels[0], true, { from: medicalEnterprise });
         await utils.shouldThrow(contractInstance.addResult(patientRefs[0], lotLabels[0], true, { from: medicalEnterprise }));
@@ -25,10 +25,13 @@ contract("ParacetamolResult", (accounts) => {
         assert.equal(result, 50);
     })
 
+    it("should be able to get the total result if no result has been added", async () => {
+        const result = await contractInstance.getResultSnapshot();
+        assert.equal(result, 0);
+    })
+
     it("shouldn't be able to add new result when closed", async () => {
         await contractInstance.close({ from: medicalEnterprise });
         await utils.shouldThrow(contractInstance.addResult(patientRefs[0], lotLabels[0], true, { from: medicalEnterprise }));
     })
-
-
 })
