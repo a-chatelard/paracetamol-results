@@ -2,6 +2,10 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
+/**
+ * @title Ownable result.
+ * @dev Define the functions and modifiers used by the ParacetamolResult contract to manage owner rights.
+ */
 abstract contract Ownable {
   address private _owner;
 
@@ -41,14 +45,6 @@ abstract contract Ownable {
   * @param newOwner The address to transfer ownership to.
   */
   function transferOwnership(address newOwner) public onlyOwner {
-    _transferOwnership(newOwner);
-  }
-
-  /**
-  * @dev Transfers control of the contract to a newOwner.
-  * @param newOwner The address to transfer ownership to.
-  */
-  function _transferOwnership(address newOwner) internal {
     require(newOwner != address(0));
     _owner = newOwner;
   }
