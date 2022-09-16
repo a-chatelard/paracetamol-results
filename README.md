@@ -20,7 +20,7 @@ A la fin de l'étude, on empêche l'insertion de nouvelles données, le numéro 
 
 On établit un nouveau contrat à chaque nouvelle étude de médicament.
 
-[Lien du contrat](https://ropsten.etherscan.io/address/0xb0357161251e974658fa419bc9875e8acb584eed)
+[Lien du contrat](https://goerli.etherscan.io/address/0x08ee87b826a241bcfb4d270517075594d9eae85f)
 
 Un front a été développé pour afficher le pourcentage d'efficacité du médicament et pour saisir de nouvelles données dans l'étude.
 
