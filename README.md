@@ -22,7 +22,8 @@ On établit un nouveau contrat à chaque nouvelle étude de médicament.
 
 [Lien du contrat](https://goerli.etherscan.io/address/0x08ee87b826a241bcfb4d270517075594d9eae85f)
 
-Un front a été développé pour afficher le pourcentage d'efficacité du médicament et pour saisir de nouvelles données dans l'étude.
+Une base de front a été développé pour afficher le pourcentage d'efficacité du médicament et pour saisir de nouvelles données dans l'étude.
+[Lien du repo react](https://github.com/a-chatelard/result-web3-app)
 
 ## Pistes d'optimisation (non développées) : ##
 
