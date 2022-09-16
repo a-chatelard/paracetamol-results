@@ -71,11 +71,11 @@ module.exports = {
      port: 7545,            // Standard Ethereum port (default: none)
      network_id: 5777,       // Any network (default: none)
     },
-    ropsten: {
+    goerli: {
       provider: function() {
-        return new HDWalletProvider(MNEMONIC, "https://ropsten.infura.io/v3/" + APIURL)
+        return new HDWalletProvider(MNEMONIC, "https://goerli.infura.io/v3/" + APIURL)
       },
-      network_id: 3,
+      network_id: 5,
       gas: 1000000      //make sure this gas allocation isn't over 4M, which is the max
     }
     //
